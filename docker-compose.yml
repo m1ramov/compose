@@ -1,0 +1,14 @@
+name: my_compose_container
+services:
+  nest-app:
+    build:
+      context: .
+  postgres:
+    image: postgres:17.5
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=0000
+      - POSTGRES_DB=fn2
+    ports:
+      - '5433:5432'
+
